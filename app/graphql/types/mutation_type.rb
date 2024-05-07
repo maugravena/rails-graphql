@@ -15,7 +15,7 @@ module Types
       connection.start
 
       channel = connection.create_channel
-      queue = channel.queue('minha.fila.teste', durable: true)
+      queue = channel.queue('create_policy', durable: true)
 
       queue.publish(input.to_json)
 
